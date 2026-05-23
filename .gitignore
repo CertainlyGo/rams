@@ -7,3 +7,4 @@ outputs/**/checkpoints/
 outputs/**/predictions.json
 *.log
 *.docx
+src/*.egg-info/
