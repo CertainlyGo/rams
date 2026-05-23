@@ -35,7 +35,7 @@ def get_label_list() -> list[str]:
 
 
 def load_json_samples(path: str | Path) -> list[Sample]:
-    with open(path, "r", encoding="utf-8") as f:
+    with open(path, "r", encoding="utf-8-sig") as f:
         rows = json.load(f)
     out: list[Sample] = []
     for r in rows:
@@ -97,4 +97,3 @@ def flatten_samples(batches: Iterable[list[Sample]]) -> list[Sample]:
     for b in batches:
         out.extend(b)
     return out
-
