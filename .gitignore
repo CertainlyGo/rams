@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+.python-version
+.pytest_cache/
+outputs/**/checkpoints/
+outputs/**/predictions.json
+*.log

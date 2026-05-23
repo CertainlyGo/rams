@@ -1,0 +1,29 @@
+[project]
+name = "rams-absa"
+version = "0.1.0"
+description = "Minimal reproducible RAMS-ABSA pipeline"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "numpy>=2.0.0",
+  "pyyaml>=6.0.1",
+  "torch>=2.5.0",
+  "transformers>=4.55.0",
+  "tqdm>=4.67.0",
+]
+
+[project.scripts]
+rams-train = "rams_absa.cli:train_main"
+rams-eval = "rams_absa.cli:eval_main"
+rams-synthesize = "rams_absa.cli:synthesize_main"
+
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
